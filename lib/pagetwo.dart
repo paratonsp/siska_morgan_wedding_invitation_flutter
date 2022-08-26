@@ -12,7 +12,7 @@ class PageTwo extends StatefulWidget {
 }
 
 class _PageTwoState extends State<PageTwo> {
-  late WebViewXController webviewController;
+   WebViewXController webviewController;
 
   void _launchMapsUrl() async {
     String lat = "-7.22943243408288";
@@ -29,8 +29,7 @@ class _PageTwoState extends State<PageTwo> {
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
-    double h = MediaQuery.of(context).size.height / 1.3;
-
+    double h = MediaQuery.of(context).size.height / 1.4;
     return Scaffold(
         body: Column(
       children: [

@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: avoid_print, prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable
 
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +7,7 @@ import 'package:siska_morgan_wedding_invitation_flutter/dashboard.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage(this.params);
-  String? params;
+  String params;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }

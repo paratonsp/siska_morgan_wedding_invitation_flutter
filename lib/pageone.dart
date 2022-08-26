@@ -24,7 +24,7 @@ class _PageOneState extends State<PageOne> {
             Stack(
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height / 1.3,
+                  height: MediaQuery.of(context).size.height / 1.4,
                   width: MediaQuery.of(context).size.width,
                   child: ShaderMask(
                     shaderCallback: (rect) {
