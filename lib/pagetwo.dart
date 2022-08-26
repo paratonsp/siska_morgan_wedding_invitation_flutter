@@ -12,7 +12,7 @@ class PageTwo extends StatefulWidget {
 }
 
 class _PageTwoState extends State<PageTwo> {
-   WebViewXController webviewController;
+  WebViewXController webviewController;
 
   void _launchMapsUrl() async {
     String lat = "-7.22943243408288";
