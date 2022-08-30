@@ -8,13 +8,13 @@ import 'package:url_strategy/url_strategy.dart';
 void main() {
   setPathUrlStrategy();
   String myurl = Uri.base.toString();
-  String params = Uri.base.queryParameters["guest"];
+  String? params = Uri.base.queryParameters["guest"];
   runApp(MyApp(myurl: myurl, params: params));
 }
 
 class MyApp extends StatelessWidget {
-  String myurl, params;
-  MyApp({this.myurl, this.params});
+  String? myurl, params;
+  MyApp({required this.myurl, required this.params});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -25,11 +25,15 @@ class _PageThreeState extends State<PageThree> {
     return Scaffold(
         body: Stack(
       children: [
-        RotatedBox(
-          quarterTurns: 2,
-          child: Image.asset(
-            "assets/border1.png",
-            width: MediaQuery.of(context).size.width / 2,
+        Positioned(
+          top: -150,
+          left: -150,
+          child: Transform.rotate(
+            angle: 90,
+            child: Image.asset(
+              "assets/decoration/4.png",
+              width: MediaQuery.of(context).size.width,
+            ),
           ),
         ),
         Center(
