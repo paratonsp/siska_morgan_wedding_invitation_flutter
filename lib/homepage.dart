@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         CupertinoButton(
                             color: Colors.grey,
                             onPressed: () {
-                              // playAudio();
+                              playAudio();
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
