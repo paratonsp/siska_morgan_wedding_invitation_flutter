@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     blendMode: BlendMode.dstIn,
                     child: Image.asset(
-                      "assets/img/1 (44)-3.jpg",
+                      "assets/img/1.jpg",
                       fit: BoxFit.cover,
                     ),
                   ),

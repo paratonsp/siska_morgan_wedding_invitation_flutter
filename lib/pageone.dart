@@ -40,7 +40,7 @@ class _PageOneState extends State<PageOne> {
                     },
                     blendMode: BlendMode.dstIn,
                     child: Image.asset(
-                      "assets/img/1 (33)-(3).jpg",
+                      "assets/img/2.jpg",
                       fit: BoxFit.cover,
                     ),
                   ),

@@ -12,11 +12,16 @@ class PageThree extends StatefulWidget {
 
 class _PageThreeState extends State<PageThree> {
   List IMAGES = [
-    "_MG_0080",
-    "_MG_0082",
-    "1 (6)-4",
-    "1 (7)-4",
-    "1 (8)-2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
   ];
   final borderRadius = BorderRadius.circular(20.0);
 
@@ -29,10 +34,10 @@ class _PageThreeState extends State<PageThree> {
           top: -150,
           left: -150,
           child: Transform.rotate(
-            angle: 90,
+            angle: 0,
             child: Image.asset(
-              "assets/decoration/4.png",
-              width: MediaQuery.of(context).size.width,
+              "assets/decoration/4x.png",
+              width: 500,
             ),
           ),
         ),
@@ -47,7 +52,7 @@ class _PageThreeState extends State<PageThree> {
                 SizedBox(height: 60),
                 Container(
                   child: SwipeDeck(
-                    startIndex: 3,
+                    startIndex: 5,
                     emptyIndicator: Container(
                       child: Center(
                         child: Text("Nothing Here"),

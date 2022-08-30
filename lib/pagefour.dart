@@ -15,12 +15,13 @@ class _PageFourState extends State<PageFour> {
       body: Stack(
         children: [
           Positioned(
-            top: 0,
+            top: -30,
+            left: -70,
             child: Transform.rotate(
               angle: 0,
               child: Image.asset(
-                "assets/decoration/1.png",
-                width: MediaQuery.of(context).size.width,
+                "assets/decoration/13x.png",
+                width: 300,
               ),
             ),
           ),
