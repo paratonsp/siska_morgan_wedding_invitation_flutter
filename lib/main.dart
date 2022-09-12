@@ -21,35 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Siska & Morgan Wedding',
-      home: NextPage(params),
-    );
-  }
-}
-
-class NextPage extends StatefulWidget {
-  NextPage(this.params);
-  String? params;
-  @override
-  State<NextPage> createState() => _NextPageState();
-}
-
-class _NextPageState extends State<NextPage> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(
-        Duration(milliseconds: 300),
-        () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => MyHomePage(widget.params)),
-            ));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SizedBox(),
+      home: MyHomePage(params),
     );
   }
 }

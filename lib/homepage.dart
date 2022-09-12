@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
     par = widget.params.toString();
     super.initState();
     assetsAudioPlayer.open(
-      Audio("assets/music.mp3"),
+      Audio.network("https://siskadanmorgan.site/assets/assets/music.mp3"),
       autoStart: false,
       showNotification: false,
       loopMode: LoopMode.single,
