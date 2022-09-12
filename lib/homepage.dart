@@ -19,28 +19,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
   String par = "";
 
-  playAudio() {
-    AssetsAudioPlayer.newPlayer().open(
+  @override
+  void initState() {
+    par = widget.params.toString();
+    super.initState();
+    assetsAudioPlayer.open(
       Audio("assets/music.mp3"),
-      autoStart: true,
+      autoStart: false,
       showNotification: false,
       loopMode: LoopMode.single,
     );
   }
 
   @override
-  void initState() {
-    par = widget.params.toString();
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     bool isMobile = MediaQuery.of(context).size.width < 768;
-    List<String> text = [
-      "Selamat Datang",
-      par,
-    ];
     return Scaffold(
       body: (!isMobile)
           ? Center(
@@ -106,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         CupertinoButton(
                             color: Colors.grey,
                             onPressed: () {
-                              playAudio();
+                              assetsAudioPlayer.play();
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -118,55 +111,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                // Center(
-                //   child: (!isMobile)
-                //       ? Text("data")
-                //       : Column(
-                //           mainAxisAlignment: MainAxisAlignment.center,
-                //           children: [
-                //             Text("Siska & Morgan",
-                //                 style: GoogleFonts.dancingScript(
-                //                     fontSize: 40, fontWeight: FontWeight.bold)),
-                //             Text("Wedding", style: GoogleFonts.lato(fontSize: 20)),
-                //             SizedBox(height: 20),
-                //             Text("We invited you to celebrate our wedding",
-                //                 style: GoogleFonts.lato(fontSize: 14)),
-                //             Text(
-                //               "Sunday, 18 September 2022",
-                //               style: GoogleFonts.lato(
-                //                 fontSize: 16,
-                //                 fontWeight: FontWeight.bold,
-                //               ),
-                //             ),
-                //             SizedBox(height: 80),
-                //             EvaporateMorphingText(
-                //               texts: text,
-                //               loopForever: true,
-                //               onComplete: () {},
-                //               yDisplacement: 1.2, // To factor of y-displacement
-                //               textStyle: TextStyle(fontSize: 40.0),
-                //             ),
-                //             SizedBox(height: 40),
-                //             Text("Kepada Yth:",
-                //                 style: GoogleFonts.lato(fontSize: 14)),
-                //             Text(par,
-                //                 style: GoogleFonts.dancingScript(
-                //                     fontSize: 20, fontWeight: FontWeight.bold)),
-                //             SizedBox(height: 20),
-
-                //             TextButton(
-                //                 onPressed: () {
-                //                   // playAudio();
-                //                   Navigator.push(
-                //                     context,
-                //                     MaterialPageRoute(
-                //                         builder: (context) => Dashboard()),
-                //                   );
-                //                 },
-                //                 child: Text("Buka Undangan"))
-                //           ],
-                //         ),
-                // ),
               ],
             ),
     );

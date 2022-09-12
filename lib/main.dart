@@ -1,4 +1,6 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable
+// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors
+
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:siska_morgan_wedding_invitation_flutter/homepage.dart';
@@ -19,7 +21,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Siska & Morgan Wedding',
-      home: MyHomePage(params),
+      home: NextPage(params),
+    );
+  }
+}
+
+class NextPage extends StatefulWidget {
+  NextPage(this.params);
+  String? params;
+  @override
+  State<NextPage> createState() => _NextPageState();
+}
+
+class _NextPageState extends State<NextPage> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(milliseconds: 300),
+        () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => MyHomePage(widget.params)),
+            ));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SizedBox(),
     );
   }
 }
